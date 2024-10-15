@@ -116,3 +116,7 @@ button {
     background-color: white;
     padding: 15px;
 }
+
+.project-name {
+    font-weight: bold;
+}
