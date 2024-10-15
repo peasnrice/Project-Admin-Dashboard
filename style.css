@@ -8,57 +8,79 @@ html {
     display: grid;
     grid-template-columns: 150px 1fr;
     grid-template-rows: 100px 1fr;
-    gap: 15px;
-}
-
-.left-bar {
-    grid-row: 1 / -1;
-    display: flex;
-    flex-direction: column;
-    background-color: teal;
-    justify-content: start;
-    gap: 20px;
-    padding: 15px;
-    color: white;
 }
 
 .header {
     display: grid;
-    grid-column: 2;
-    background-color: pink;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aquamarine;
 }
 
 .nav {
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: 3fr 2fr;
+    padding: 15px;
 }
 
-.user-profile {
+.nav .user-profile {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
-    gap: 10px;
-    justify-content: end;
+    justify-items: center;
+    gap: 15px;
+}
+
+.nav .site-search {
+    width: 80%;
 }
 
 .control {
     display: grid;
-    grid-template-columns: 4fr 1fr 1fr 1fr;
-    grid-column: 2 / -1;
+    grid-template-columns: 3fr 2fr;
+    padding: 15px;
+}
+
+.control .left-control {}
+
+.control .right-control {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.left-bar {
+    display: grid;
+    background-color: grey;
+    grid-row: 1 / 3;
+    color: white;
+    align-content: start;
+    gap: 30px;
+    padding: 15px;
+    font-weight: bold;
+}
+
+button {
+    border: 0px solid black;
+    border-radius: 15px;
 }
 
 .main {
     display: grid;
-    grid-column: 2/-1;
-    grid-template-columns: 3fr 1fr;
-    background-color: grey;
+    grid-template-columns: 2fr 1fr;
+    background-color: bisque;
+}
+
+.projects {
+    background-color: bisque;
 }
 
 .project-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 15px;
-    margin: 15px;
+    padding: 15px
 }
 
 .project-cards .card {
@@ -67,4 +89,12 @@ html {
 
 .right-bar {
     display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    padding: 15px;
+}
+
+.right-bar>div {
+    background-color: white;
+    padding: 15px;
 }
