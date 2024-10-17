@@ -1,22 +1,32 @@
+/* Base colors */
 body,
 html {
     height: 100%;
     margin: 0;
+    background-color: #fff;
+    /* Pastel cream */
 }
 
+body {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Layout */
 .container {
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 270px 1fr;
     grid-template-rows: 100px 1fr;
 }
 
+/* Header */
 .header {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 50px 50px;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
+    background-color: #FFEBE9;
+    /* Pastel pink */
 }
 
 .nav {
@@ -27,59 +37,73 @@ html {
 
 .nav .user-profile {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    justify-items: center;
-    gap: 15px;
+    grid-template-columns: 40px 40px 150px;
+    justify-content: end;
+    align-items: center;
 }
 
 .search {
     display: grid;
-    place-items: center;
+    justify-content: start;
+    align-items: center;
+    grid-template-columns: 1fr 15fr;
 }
 
 .nav .site-search {
     width: 85%;
     border: none;
-    background-color: #E2E8F0;
+    background-color: #fff;
+    /* Pastel yellow-green */
     border-radius: 15px;
+    padding-left: 10px;
 }
 
 .control {
     display: grid;
     grid-template-columns: 3fr 2fr;
-    padding: 15px;
 }
 
-.control .left-control {}
-
-.control .right-control {
+.right-control {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 100px 100px 100px;
+    justify-content: end;
+    align-items: center;
     gap: 15px;
+    margin-right: 20px;
 }
 
+/* Left bar */
 .left-bar {
     display: grid;
-    background-color: #1A92D4;
+    background-color: #A8D5E2;
+    /* Pastel blue */
     grid-row: 1 / 3;
-    color: white;
+    color: #3D5A80;
+    /* Dark blue-gray */
     align-content: start;
-    gap: 30px;
+    gap: 40px;
     padding: 15px;
     font-weight: bold;
 }
 
+/* Buttons */
 button {
     border: 0px solid black;
-    border-radius: 15px;
+    border-radius: 50px;
     background-color: #1A92D4;
+    /* Pastel blue */
     color: #fff;
+    font-weight: bold;
+    height: 30px;
+    width: 100px;
 }
 
+/* Main section */
 .main {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    background-color: #E2E8F0;
+    grid-template-columns: 3fr 1fr;
+    background-color: #F0F4F8;
+    /* Light pastel gray */
 }
 
 .projects {
@@ -90,33 +114,78 @@ button {
     font-weight: bold;
 }
 
+/* Project cards */
 .project-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
     gap: 15px;
-    padding: 15px
+    padding: 15px;
 }
 
 .project-cards .card {
     background-color: #fff;
-    border-left: 4px solid #F0B429;
+    border-left: 4px solid #FFD6A5;
+    /* Pastel peach */
     border-radius: 5px;
     padding: 15px;
+    box-shadow: #1A92D3 3px 3px 4px;
 }
 
+.project-cards .card:hover {
+    cursor: pointer;
+    /* margin: 2px 0 0 2px; */
+    box-shadow: #1A92D3 1px 1px 4px;
+}
+
+
+/* Right bar */
 .right-bar {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    gap: 15px;
-    padding: 15px;
 }
 
 .right-bar>*>.announcement-cards,
 .right-bar>*>.trending-cards {
-    background-color: white;
+    background-color: #FFFFFF;
     padding: 15px;
 }
 
+/* Text and other elements */
 .project-name {
     font-weight: bold;
+}
+
+.user-profile>.user-name {
+    font-weight: bold;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Hover effect for both text and SVG fill */
+li:hover,
+.logo:hover {
+    color: red;
+    /* Red color for text */
+    cursor: pointer;
+}
+
+/* Hover effect for SVG paths */
+li:hover svg path,
+.logo:hover svg path,
+.profile-pic:hover svg path,
+.notification-bell:hover svg path,
+.search:hover svg path {
+    fill: red;
+    /* Red color for SVG on hover */
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
